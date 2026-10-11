@@ -13,7 +13,8 @@
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 285px), 320px));
+  justify-content: center;
   gap: 24px;
   background: transparent;
   border: none;
@@ -126,6 +127,41 @@
   color: #ef4444;
 }
 
+.alumni-groups {
+  display: grid;
+  gap: 40px;
+}
+
+.alumni-group h2 {
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.15rem;
+  margin: 0 0 20px;
+}
+
+.team-role-groups {
+  display: grid;
+  gap: 36px;
+}
+
+.team-role-group h2 {
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 0 0 22px;
+}
+
+.team-role-group h2::after {
+  content: '';
+  display: block;
+  width: 42px;
+  height: 2px;
+  margin: 12px auto 0;
+  background: #E76F00;
+  border-radius: 2px;
+}
+
 /* ── Mentor Card ── */
 .mentorCard {
   background: transparent;
@@ -135,6 +171,7 @@
   align-items: flex-start;
   text-align: left;
   width: 100%;
+  min-width: 0;
 }
 
 .mentorCard_avatar {
@@ -157,6 +194,7 @@
 
 .mentorCard_body {
   width: 100%;
+  min-width: 0;
   margin-bottom: 20px;
   flex-grow: 1;
 }
@@ -167,6 +205,7 @@
   font-weight: 700;
   color: #ffffff;
   margin: 0 0 4px;
+  overflow-wrap: anywhere;
 }
 
 .mentorCard_sys {
@@ -177,6 +216,7 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin: 0 0 8px;
+  overflow-wrap: anywhere;
 }
 
 .mentorCard_des {
@@ -184,6 +224,7 @@
   color: #B5B5B5;
   line-height: 1.5;
   margin: 0;
+  overflow-wrap: anywhere;
 }
 
 .mentorCard_batch {
@@ -201,11 +242,13 @@
   margin: 4px 0 0 0;
   line-height: 1.4;
   font-style: italic;
+  overflow-wrap: anywhere;
 }
 
 /* ── Mentor actions ── */
 .mentorCard_actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   width: 100%;
   margin-top: auto;
@@ -226,8 +269,10 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 6px;
   transition: all 0.2s ease;
-  white-space: nowrap;
-  flex: 1;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  min-width: 0;
+  flex: 1 1 90px;
 }
 
 .mentorCard_action:hover {
@@ -243,6 +288,12 @@
   font-size: 0.85rem;
   font-weight: 700;
   color: inherit;
+}
+
+.mentorCard_instagram-icon {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 15px;
 }
 
 /* ── Sponsor Grid ── */
@@ -328,7 +379,7 @@
   }
 
   .MSsec ul {
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 320px));
     gap: 16px;
   }
 

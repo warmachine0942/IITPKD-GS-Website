@@ -15,7 +15,8 @@ const Navbar = () => {
   return (
     <nav className={`navbar${scrolled ? " navbar--scrolled" : ""}`}>
       <Link to="/" className="navbar-brand" aria-label="Mach-V Home">
-        MACH<span className="navbar-brand-accent">—</span>V
+        <img src="/mach-v-logo.png" alt="" className="navbar-logo" />
+        <span>MACH<span className="navbar-brand-accent">—</span>V</span>
       </Link>
 
       <div className="navbar-links">

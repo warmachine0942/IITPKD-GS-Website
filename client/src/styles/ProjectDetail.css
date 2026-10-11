@@ -170,6 +170,38 @@
   margin: 0;
 }
 
+.project-data-list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+}
+
+.project-data-list > div {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.35fr) 1fr;
+  gap: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 12px;
+}
+
+.project-data-list dt {
+  color: #E76F00;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.project-data-list dd {
+  color: #B5B5B5;
+  line-height: 1.6;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.project-section a {
+  color: #FF8A1D;
+  overflow-wrap: anywhere;
+}
+
 /* ── Objectives ── */
 .project-objectives-list {
   list-style: none;
@@ -227,5 +259,10 @@
 
   .project-info-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-data-list > div {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 }

@@ -7,6 +7,7 @@ const Footer = () => {
   return (
     <footer className="footer-section">
       <div className="footer-content">
+        <img src="/mach-v-logo.png" alt="Mach-V Rocketry Team" className="footer-logo" />
         <h3 className="contact-title">Contact Us</h3>
         <p className="contact-subtitle">Get in touch with the Mach V Rocketry Team</p>
 
@@ -41,7 +42,13 @@ const Footer = () => {
           </a>
 
           {/* Instagram */}
-          <div className="contact-card contact-card-upcoming" id="contact-instagram">
+          <a
+            href="https://www.instagram.com/machv.iitpkd/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-card"
+            id="contact-instagram"
+          >
             <div className="contact-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -50,8 +57,8 @@ const Footer = () => {
               </svg>
             </div>
             <span className="contact-label">Instagram</span>
-            <span className="contact-upcoming-badge">Coming Soon</span>
-          </div>
+            <span className="contact-value">@machv.iitpkd</span>
+          </a>
         </div>
 
         <p className="footer-copyright">

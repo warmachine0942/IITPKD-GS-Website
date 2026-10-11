@@ -25,6 +25,9 @@
 
 /* ── Brand ── */
 .navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-family: 'Orbitron', sans-serif;
   font-size: 1rem;
   font-weight: 700;
@@ -33,6 +36,12 @@
   text-decoration: none;
   user-select: none;
   flex-shrink: 0;
+}
+
+.navbar-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .navbar-brand-accent {
@@ -102,6 +111,11 @@
 
   .navbar-brand {
     font-size: 0.9rem;
+  }
+
+  .navbar-logo {
+    width: 36px;
+    height: 36px;
   }
 
   .nav-btn {

@@ -14,6 +14,13 @@
   margin: 0 auto;
 }
 
+.footer-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 18px;
+}
+
 /* ── Header ── */
 .contact-title {
   font-family: 'Orbitron', sans-serif;

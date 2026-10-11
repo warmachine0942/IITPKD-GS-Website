@@ -18,18 +18,20 @@ export default function Subsystems() {
 
       <div className="subsystems-grid">
         {subsystems.map((sub) => (
-          <div 
+          <button
             key={sub.id} 
             className="subsystem-card"
             onClick={() => navigate(`/subsystems/${sub.id}`)}
-            style={{ cursor: 'pointer' }}
+            type="button"
+            aria-label={`Explore ${sub.title} subsystem`}
           >
-            <div className="subsystem-icon">
+            <span className="subsystem-icon" aria-hidden="true">
               {sub.icon}
-            </div>
-            <h2 className="subsystem-card-title">{sub.title}</h2>
+            </span>
+            <span className="subsystem-card-title">{sub.title}</span>
             <p className="subsystem-card-desc">{sub.desc}</p>
-          </div>
+            <span className="subsystem-card-link" aria-hidden="true">Explore subsystem <span>↗</span></span>
+          </button>
         ))}
       </div>
     </div>
